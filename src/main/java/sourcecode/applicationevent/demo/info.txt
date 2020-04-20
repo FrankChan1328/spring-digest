@@ -1,0 +1,4 @@
+Spring 的事件流程总结定义一个事件: 
+	实现一个继承自 ApplicationEvent，并且写相应的构造函数；
+	定义一个事件监听者：实现 ApplicationListener 接口，重写 onApplicationEvent() 方法；
+	使用事件发布者发布消息: 可以通过 ApplicationEventPublisher 的 publishEvent() 方法发布消息。
