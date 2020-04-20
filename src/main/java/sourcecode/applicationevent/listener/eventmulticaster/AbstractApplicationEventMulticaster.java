@@ -263,12 +263,15 @@ public abstract class AbstractApplicationEventMulticaster
      * for the given event type
      */
     protected boolean supportsEvent(Class<?> listenerType, ResolvableType eventType) {
-        if (GenericApplicationListener.class.isAssignableFrom(listenerType) ||
-                SmartApplicationListener.class.isAssignableFrom(listenerType)) {
-            return true;
-        }
-        ResolvableType declaredEventType = GenericApplicationListenerAdapter.resolveDeclaredEventType(listenerType);
-        return (declaredEventType == null || declaredEventType.isAssignableFrom(eventType));
+//        if (GenericApplicationListener.class.isAssignableFrom(listenerType) ||
+//                SmartApplicationListener.class.isAssignableFrom(listenerType)) {
+//            return true;
+//        }
+//        ResolvableType declaredEventType = GenericApplicationListenerAdapter.resolveDeclaredEventType(listenerType);
+//        return (declaredEventType == null || declaredEventType.isAssignableFrom(eventType));
+        
+        // 参考原方法
+        return true;
     }
 
     /**
